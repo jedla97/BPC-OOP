@@ -84,6 +84,21 @@ namespace cv02
             return Math.Sqrt(real*real+imaginary*imaginary);
         }
 
+        public double AmplitudeArgument()
+        {
+            return Math.Sqrt(real * real + imaginary * imaginary);
+        }
+
+        public double Sin()
+        {
+            return Math.Sqrt(real * real + imaginary * imaginary);
+        }
+
+        public double Cos()
+        {
+            return Math.Sqrt(real * real + imaginary * imaginary);
+        }
+
         public override string ToString()
         {
             if (imaginary >= 0)
