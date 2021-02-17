@@ -1,4 +1,5 @@
-﻿namespace cv02
+﻿using System;
+namespace cv02
 {
     class Complex
     {
@@ -76,6 +77,13 @@
         {
             return new Complex(real, -imaginary);
         }
+
+        // do complex conjugate
+        public double Abs()
+        {
+            return Math.Sqrt(real*real+imaginary*imaginary);
+        }
+
         public override string ToString()
         {
             if (imaginary >= 0)

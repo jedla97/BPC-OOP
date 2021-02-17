@@ -23,6 +23,7 @@ namespace cv02
             Console.WriteLine(-c);
             Console.WriteLine(c.Conjugate());
             Console.WriteLine(c2.Conjugate());
+            Console.WriteLine(c2.Abs());
             Console.ReadLine();
         }
     }
