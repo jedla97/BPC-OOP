@@ -13,10 +13,13 @@ namespace cv02
             Console.WriteLine("test");
             Complex c = new Complex(5.1, -8.6);
             Complex c2 = new Complex(4.1, 7.6);
+            Complex c3 = new Complex(5.1, -8.6);
             Console.WriteLine(c+c2);
             Console.WriteLine(c-c2);
             Console.WriteLine(c*c2);
             Console.WriteLine(c/c2);
+            Console.WriteLine(c == c3);
+            Console.WriteLine(c != c3);
             Console.WriteLine(-c);
             Console.ReadLine();
         }

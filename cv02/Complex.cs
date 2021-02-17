@@ -44,6 +44,33 @@
             return new Complex(-a.real, -a.imaginary);
         }
 
+        // real and imaginary componet is equal if are equal return true and otherwise
+        public static bool operator ==(Complex a, Complex b)
+        {
+            if ((a.real == b.real) && (a.imaginary == b.imaginary))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+        // real and imaginary componet is not equal. if not equal return true and otherwise
+        public static bool operator !=(Complex a, Complex b)
+        {
+            if ((a.real == b.real) && (a.imaginary == b.imaginary))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
 
         public override string ToString()
         {
