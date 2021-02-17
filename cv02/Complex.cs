@@ -71,7 +71,11 @@
             }
         }
 
-
+        // do complex conjugate
+        public Complex Conjugate()
+        {
+            return new Complex(real, -imaginary);
+        }
         public override string ToString()
         {
             if (imaginary >= 0)
@@ -84,6 +88,8 @@
             }
 
         }
+
+        
 
         public double Real { get; set; }
         public double Imaginary { get; set; }

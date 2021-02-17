@@ -21,6 +21,8 @@ namespace cv02
             Console.WriteLine(c == c3);
             Console.WriteLine(c != c3);
             Console.WriteLine(-c);
+            Console.WriteLine(c.Conjugate());
+            Console.WriteLine(c2.Conjugate());
             Console.ReadLine();
         }
     }
