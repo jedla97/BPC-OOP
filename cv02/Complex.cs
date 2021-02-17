@@ -12,21 +12,25 @@
 
         }
 
+        // add two comlex number 
         public static Complex operator +(Complex a, Complex b)
         {
             return new Complex(a.real + b.real, a.imaginary + b.imaginary);
         }
 
+        // substract two comlex number 
         public static Complex operator -(Complex a, Complex b)
         {
             return new Complex(a.real - b.real, a.imaginary - b.imaginary);
         }
 
+        // multiply two comlex number 
         public static Complex operator *(Complex a, Complex b)
         {
             return new Complex(a.real*b.real-a.imaginary*b.imaginary, a.real*b.imaginary+a.imaginary*b.real);
         }
 
+        // divide two comlex number 
         public static Complex operator /(Complex a, Complex b)
         { // a + b    c + d
             return new Complex((a.real*b.real + b.imaginary*a.imaginary)/(b.real*b.real + b.imaginary * b.imaginary), 
@@ -34,6 +38,11 @@
                 );
         }
 
+        // unary- /real and imaginary component multiplied by -1.
+        public static Complex operator -(Complex a)
+        {
+            return new Complex(-a.real, -a.imaginary);
+        }
 
 
         public override string ToString()

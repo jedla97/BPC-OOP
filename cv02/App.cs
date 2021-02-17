@@ -17,6 +17,7 @@ namespace cv02
             Console.WriteLine(c-c2);
             Console.WriteLine(c*c2);
             Console.WriteLine(c/c2);
+            Console.WriteLine(-c);
             Console.ReadLine();
         }
     }
