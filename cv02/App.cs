@@ -10,7 +10,7 @@ namespace cv02
     {
         static void Main(string[] args)
         {
-            // use C# docs fot System.numerics and https://www.hackmath.net/cz/kalkulacka/komplexni-cisla for testing
+            // use C# docs for System.numerics and https://www.hackmath.net/cz/kalkulacka/komplexni-cisla for testing
             Complex c = new Complex(5.1, -8.6);
             Complex c2 = new Complex(5.1, -8.6);
             TestComplex.Test(new Complex(2.1,3.8) + new Complex(1,4), new Complex(3.1,7.8), "test +");
