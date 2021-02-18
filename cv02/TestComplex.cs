@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace cv02
 {
-    class TestComplex
+    public class TestComplex
     {
-        const double EPSILON = 0.000001;
+        public const double EPSILON = 0.000001;
         public static void Test(Complex actual, Complex expected, string name)
         {
             double helpReal = Math.Abs(actual.Real) - Math.Abs(expected.Real);

@@ -1,7 +1,7 @@
 ﻿using System;
 namespace cv02
 {
-    class Complex
+    public class Complex
     {
         private double real;
         private double imaginary;
@@ -101,9 +101,7 @@ namespace cv02
                 return string.Format("{0}-{1}j", real, -imaginary);
             }
 
-        }
-
-        
+        }        
 
         public double Real
         {
