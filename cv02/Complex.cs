@@ -79,24 +79,15 @@ namespace cv02
         }
 
         // do complex conjugate
-        public double Abs()
+        public double Modul()
         {
             return Math.Sqrt(real*real+imaginary*imaginary);
         }
 
-        public double AmplitudeArgument()
+        // Do argument of complex number. 
+        public double Argument()
         {
-            return Math.Sqrt(real * real + imaginary * imaginary);
-        }
-
-        public double Sin()
-        {
-            return Math.Sqrt(real * real + imaginary * imaginary);
-        }
-
-        public double Cos()
-        {
-            return Math.Sqrt(real * real + imaginary * imaginary);
+            return Math.Atan2(imaginary, real);
         }
 
         public override string ToString()
@@ -114,7 +105,15 @@ namespace cv02
 
         
 
-        public double Real { get; set; }
-        public double Imaginary { get; set; }
+        public double Real
+        {
+            get { return real; }
+            set { real = value; }
+        }
+        public double Imaginary
+        {
+            get { return imaginary; }
+            set { imaginary = value; }
+        }
     }
 }
