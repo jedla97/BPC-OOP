@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cv02
 {
-    class App
+    public class App
     {
         static void Main(string[] args)
         {

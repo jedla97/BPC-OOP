@@ -8,12 +8,12 @@ namespace cv02
 {
     public class TestComplex
     {
-        public const double EPSILON = 0.000001;
+        public const double Epsilon = 0.000001;
         public static void Test(Complex actual, Complex expected, string name)
         {
             double helpReal = Math.Abs(actual.Real) - Math.Abs(expected.Real);
             double helpImaginary = Math.Abs(actual.Imaginary) - Math.Abs(expected.Imaginary);
-            if (helpReal <= EPSILON && helpReal >= -EPSILON && helpImaginary <= EPSILON && helpImaginary >= -EPSILON)
+            if (helpReal <= Epsilon && helpReal >= -Epsilon && helpImaginary <= Epsilon && helpImaginary >= -Epsilon)
             {
                 Console.WriteLine("Test {0}: OK", name);
             }
