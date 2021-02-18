@@ -13,25 +13,25 @@ namespace cv02
 
         }
 
-        // add two comlex number 
+        // add two complex number 
         public static Complex operator +(Complex a, Complex b)
         {
             return new Complex(a.real + b.real, a.imaginary + b.imaginary);
         }
 
-        // substract two comlex number 
+        // substract two complex number 
         public static Complex operator -(Complex a, Complex b)
         {
             return new Complex(a.real - b.real, a.imaginary - b.imaginary);
         }
 
-        // multiply two comlex number 
+        // multiply two complex number 
         public static Complex operator *(Complex a, Complex b)
         {
             return new Complex(a.real*b.real-a.imaginary*b.imaginary, a.real*b.imaginary+a.imaginary*b.real);
         }
 
-        // divide two comlex number 
+        // divide two complex number 
         public static Complex operator /(Complex a, Complex b)
         { // a + b    c + d
             return new Complex((a.real*b.real + b.imaginary*a.imaginary)/(b.real*b.real + b.imaginary * b.imaginary), 
@@ -45,31 +45,16 @@ namespace cv02
             return new Complex(-a.real, -a.imaginary);
         }
 
-        // real and imaginary componet is equal if are equal return true and otherwise
+        // real and imaginary component is equal if are equal return true and otherwise
         public static bool operator ==(Complex a, Complex b)
         {
-            if ((a.real == b.real) && (a.imaginary == b.imaginary))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-
+            return (a.real == b.real) && (a.imaginary == b.imaginary);
         }
 
-        // real and imaginary componet is not equal. if not equal return true and otherwise
+        // real and imaginary component is not equal. if not equal return true and otherwise
         public static bool operator !=(Complex a, Complex b)
         {
-            if ((a.real == b.real) && (a.imaginary == b.imaginary))
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            return !(a.real == b.real) && !(a.imaginary == b.imaginary);
         }
 
         // do complex conjugate
@@ -78,7 +63,7 @@ namespace cv02
             return new Complex(real, -imaginary);
         }
 
-        // do complex conjugate
+        // do modul of complex number
         public double Modul()
         {
             return Math.Sqrt(real*real+imaginary*imaginary);
