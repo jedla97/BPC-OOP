@@ -91,7 +91,7 @@ namespace cv03
                         {
                             for (int k = 0; k < b.matrixArr.GetLength(1); k++)
                             {
-                                m.matrixArr[i, j] += a.matrixArr[i, k] * b.matrixArr[k, j];
+                                m.matrixArr[i, j] = a.matrixArr[i, k] * b.matrixArr[k, j];
                             }
                         }
                     }

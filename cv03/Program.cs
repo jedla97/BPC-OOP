@@ -31,8 +31,8 @@ namespace cv03
             Console.WriteLine(m1 == m2);
             Console.WriteLine(m1 != m2);
             Console.WriteLine(m1.Determinant());
-            Console.WriteLine(m3.Determinant());
             Console.WriteLine(m4.Determinant());
+            Console.WriteLine(m3.Determinant());
             Console.ReadLine();
 
 
