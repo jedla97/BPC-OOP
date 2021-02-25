@@ -10,7 +10,6 @@ namespace cv02
         {
             this.real = real;
             this.imaginary = imaginary;
-
         }
 
         // add two complex number 
