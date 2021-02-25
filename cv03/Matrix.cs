@@ -15,6 +15,7 @@ namespace cv03
             this.matrixArr = matrixArr;
         }
 
+        // when error is find return null matrix and throw exception
         public static Matrix operator +(Matrix a, Matrix b)
         {
             try
@@ -44,6 +45,7 @@ namespace cv03
             return null;
         }
 
+        // when error is find return null matrix and throw exception
         public static Matrix operator -(Matrix a, Matrix b)
         {
             try
@@ -74,7 +76,8 @@ namespace cv03
 
         }
 
-        //https://www.tutorialspoint.com/chash-program-to-multiply-two-matrices use algorithm
+        // https://www.tutorialspoint.com/chash-program-to-multiply-two-matrices use algorithm
+        // when error is find return null matrix and throw exception
         public static Matrix operator *(Matrix a, Matrix b)
         {
             try
@@ -107,6 +110,7 @@ namespace cv03
 
         }
 
+        // when error is find return null matrix and catch build in exception
         public static Matrix operator -(Matrix a)
         {
             try
@@ -128,7 +132,10 @@ namespace cv03
             return null;
 
         }
-
+        
+        // when matrix a row and collumn != matrix b row and collumn return false
+        // when element on position [x,y] != to element on other matrix on [x,y] return false
+        // when exception is catch return false and print exception
         public static bool operator ==(Matrix a, Matrix b)
         {
             try
@@ -160,7 +167,8 @@ namespace cv03
             return true;
 
         }
-
+        
+        // when a == b negate output and retun it other time is not same so retur true;
         public static bool operator !=(Matrix a, Matrix b)
         {
             try
@@ -179,7 +187,8 @@ namespace cv03
 
         }
 
-
+        // return value for matrix 1x1 2x2 3x3
+        // for other throw exception and return NaN
         public double Determinant()
         {
             try
@@ -208,7 +217,7 @@ namespace cv03
             {
                 Console.WriteLine("Error with addition of matrix. Err msg: " + e);
             }
-            return -1;
+            return Double.NaN;
         }
 
         public override string ToString()
