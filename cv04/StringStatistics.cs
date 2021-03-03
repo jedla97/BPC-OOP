@@ -16,6 +16,7 @@ namespace cv04
             this.Text = text;
         }
 
+        /// <returns>Returns Integrer with number of words.</returns>
         public int NumberOfWords()
         {
             char[] delimiterChars = { ' ', '\n' };
@@ -23,12 +24,14 @@ namespace cv04
             return words;
         }
 
+        /// <returns>Returns Integer with number of row.</returns>
         public int NumberOfRow()
         {
             int row = Text.Split('\n').Length;
             return row;
         }
 
+        /// <returns>Returns Integer number of sentences.</returns>
         public int NumberOfSentences()
         {
             char[] delimiterChars = { '.', '?', '!' };
@@ -49,6 +52,7 @@ namespace cv04
             return counter;
         }
 
+        /// <returns>Returns arrayList of longest words.</returns>
         public ArrayList LongestWords()
         {
             ArrayList longestWords = new ArrayList();
@@ -73,6 +77,7 @@ namespace cv04
             return longestWords;
         }
 
+        /// <returns>Returns arrayList of shortest words.</returns>
         public ArrayList ShortestWords()
         {
             ArrayList longestWords = new ArrayList();
@@ -97,6 +102,8 @@ namespace cv04
             return longestWords;
         }
 
+        // using dictionary something like hashmap and every occurrence add value by 1 and after finding biggest value
+        /// <returns>Returns arrayList of most common word.</returns>
         public ArrayList MostCommonWords()
         {
             var dict = new Dictionary<string, int>();
@@ -118,7 +125,7 @@ namespace cv04
 
             foreach (var kvp in dict)
             {
-                if (kvp.Value>ocurencies)
+                if (kvp.Value > ocurencies)
                 {
                     ocurencies = kvp.Value;
                     commonWords.Clear();
@@ -133,6 +140,7 @@ namespace cv04
             return commonWords;
         }
 
+        /// <returns>Returns sorted arrayList of words.</returns>
         public ArrayList SortedArray()
         {
             ArrayList wordList = new ArrayList();
@@ -146,6 +154,7 @@ namespace cv04
             return wordList;
         }
 
+        /// <returns>Returns StringBuilder with items from arraylist and every word is divided by comma.</returns>
         public StringBuilder PrintArrayList(ArrayList arrlist)
         {
             StringBuilder text = new StringBuilder();
