@@ -21,7 +21,9 @@ namespace cv04
             Console.WriteLine("Number of rows: {0}", s.NumberOfRow());
             Console.WriteLine("Number of sentences: {0}", s.NumberOfSentences());
             Console.WriteLine("Longest words: {0}", s.PrintArrayList(s.LongestWords()));
-            Console.WriteLine("Longest words: {0}", s.PrintArrayList(s.ShortestWords()));
+            Console.WriteLine("Shortest words: {0}", s.PrintArrayList(s.ShortestWords()));
+            Console.WriteLine("Most common words: {0}", s.PrintArrayList(s.MostCommonWords()));
+            s.MostCommonWords();
             Console.ReadLine();
         }
     }

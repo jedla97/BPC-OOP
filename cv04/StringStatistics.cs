@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace cv04
 {
@@ -34,13 +35,13 @@ namespace cv04
             string text = Text.Replace("\n", "").Replace(" ", "");
             string[] row = text.Split(delimiterChars);
             int counter = 0;
-            for (int i = 0; i < row.Length-2; i++)
+            for (int i = 0; i < row.Length - 2; i++)
             {
-                if(i==0 && Char.IsUpper(row[i][0]))
+                if (i == 0 && Char.IsUpper(row[i][0]))
                 {
                     counter++;
                 }
-                if (Char.IsUpper(row[i+1][0]))
+                if (Char.IsUpper(row[i + 1][0]))
                 {
                     counter++;
                 }
@@ -51,7 +52,7 @@ namespace cv04
         public ArrayList LongestWords()
         {
             ArrayList longestWords = new ArrayList();
-            string text = Text.Replace("\n"," ").Replace("!", "").Replace("?", "").Replace(",", "").Replace(".", "").Replace("(", "").Replace(")", "");
+            string text = Text.Replace("\n", " ").Replace("!", "").Replace("?", "").Replace(",", "").Replace(".", "").Replace("(", "").Replace(")", "");
             string[] words = text.Split(' ');
             int biggestLenght = 0;
 
@@ -77,17 +78,17 @@ namespace cv04
             ArrayList longestWords = new ArrayList();
             string text = Text.Replace("\n", " ").Replace("!", "").Replace("?", "").Replace(",", "").Replace(".", "").Replace("(", "").Replace(")", "");
             string[] words = text.Split(' ');
-            int biggestLenght = int.MaxValue;
+            int shortestLenght = int.MaxValue;
 
             foreach (var word in words)
             {
-                if (word.Length < biggestLenght)
+                if (word.Length < shortestLenght)
                 {
-                    biggestLenght = word.Length;
+                    shortestLenght = word.Length;
                     longestWords.Clear();
                     longestWords.Add(word);
                 }
-                else if (word.Length == biggestLenght)
+                else if (word.Length == shortestLenght)
                 {
                     longestWords.Add(word);
                 }
@@ -96,6 +97,41 @@ namespace cv04
             return longestWords;
         }
 
+        public ArrayList MostCommonWords()
+        {
+            var dict = new Dictionary<string, int>();
+            ArrayList commonWords = new ArrayList();
+            string text = Text.Replace("\n", " ").Replace("!", "").Replace("?", "").Replace(",", "").Replace(".", "").Replace("(", "").Replace(")", "");
+            string[] words = text.Split(' ');
+            int ocurencies = 0;
+            foreach (var item in words)
+            {
+                if (dict.ContainsKey(item))
+                {
+                    dict[item]++;
+                }
+                else
+                {
+                    dict.Add(item, 1);
+                }
+            }
+
+            foreach (var kvp in dict)
+            {
+                if (kvp.Value>ocurencies)
+                {
+                    ocurencies = kvp.Value;
+                    commonWords.Clear();
+                    commonWords.Add(kvp.Key);
+                }
+                else if (kvp.Value == ocurencies)
+                {
+                    commonWords.Add(kvp.Key);
+                }
+            }
+
+            return commonWords;
+        }
 
         public StringBuilder PrintArrayList(ArrayList arrlist)
         {
@@ -113,6 +149,7 @@ namespace cv04
             }
             return text;
         }
+
         public override string ToString()
         {
             return this.Text;
@@ -120,6 +157,6 @@ namespace cv04
 
         //pocet slov, pocet radku, pocet vet, pole nejdelsich slov, pole nejkratsich slov,
         //pole nejcetnejsich slov, setridene pole slov dle abecedy, 
-        
+
     }
 }
