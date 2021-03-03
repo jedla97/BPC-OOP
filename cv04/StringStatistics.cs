@@ -72,13 +72,44 @@ namespace cv04
             return longestWords;
         }
 
+        public ArrayList ShortestWords()
+        {
+            ArrayList longestWords = new ArrayList();
+            string text = Text.Replace("\n", " ").Replace("!", "").Replace("?", "").Replace(",", "").Replace(".", "").Replace("(", "").Replace(")", "");
+            string[] words = text.Split(' ');
+            int biggestLenght = int.MaxValue;
+
+            foreach (var word in words)
+            {
+                if (word.Length < biggestLenght)
+                {
+                    biggestLenght = word.Length;
+                    longestWords.Clear();
+                    longestWords.Add(word);
+                }
+                else if (word.Length == biggestLenght)
+                {
+                    longestWords.Add(word);
+                }
+            }
+
+            return longestWords;
+        }
+
 
         public StringBuilder PrintArrayList(ArrayList arrlist)
         {
             StringBuilder text = new StringBuilder();
-            foreach (var item in arrlist)
+            if (arrlist.Count == 1)
             {
-                text.Append(item).Append("; ");
+                text.Append(arrlist[0]);
+            }
+            else
+            {
+                foreach (var item in arrlist)
+                {
+                    text.Append(item).Append(", ");
+                }
             }
             return text;
         }
