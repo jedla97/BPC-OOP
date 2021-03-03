@@ -23,7 +23,7 @@ namespace cv04
             Console.WriteLine("Longest words: {0}", s.PrintArrayList(s.LongestWords()));
             Console.WriteLine("Shortest words: {0}", s.PrintArrayList(s.ShortestWords()));
             Console.WriteLine("Most common words: {0}", s.PrintArrayList(s.MostCommonWords()));
-            s.MostCommonWords();
+            Console.WriteLine("Sorted words: {0}", s.PrintArrayList(s.SortedArray()));
             Console.ReadLine();
         }
     }

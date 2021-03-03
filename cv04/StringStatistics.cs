@@ -133,6 +133,19 @@ namespace cv04
             return commonWords;
         }
 
+        public ArrayList SortedArray()
+        {
+            ArrayList wordList = new ArrayList();
+            string text = Text.Replace("\n", " ").Replace("!", "").Replace("?", "").Replace(",", "").Replace(".", "").Replace("(", "").Replace(")", "");
+            string[] words = text.Split(' ');
+            foreach (var item in words)
+            {
+                wordList.Add(item);
+            }
+            wordList.Sort();
+            return wordList;
+        }
+
         public StringBuilder PrintArrayList(ArrayList arrlist)
         {
             StringBuilder text = new StringBuilder();
@@ -149,6 +162,7 @@ namespace cv04
             }
             return text;
         }
+
 
         public override string ToString()
         {
