@@ -199,8 +199,5 @@ namespace cv04
             return this.Text;
         }
 
-        //pocet slov, pocet radku, pocet vet, pole nejdelsich slov, pole nejkratsich slov,
-        //pole nejcetnejsich slov, setridene pole slov dle abecedy, 
-
     }
 }
