@@ -123,17 +123,17 @@ namespace cv04
                 }
             }
 
-            foreach (var kvp in dict)
+            foreach (var key in dict)
             {
-                if (kvp.Value > ocurencies)
+                if (key.Value > ocurencies)
                 {
-                    ocurencies = kvp.Value;
+                    ocurencies = key.Value;
                     commonWords.Clear();
-                    commonWords.Add(kvp.Key);
+                    commonWords.Add(key.Key);
                 }
-                else if (kvp.Value == ocurencies)
+                else if (key.Value == ocurencies)
                 {
-                    commonWords.Add(kvp.Key);
+                    commonWords.Add(key.Key);
                 }
             }
 
