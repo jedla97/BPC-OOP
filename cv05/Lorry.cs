@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cv05
 {
-    class Lorry : Car
+    public class Lorry : Car
     {
         public double transportedLoad;
 
@@ -20,8 +20,8 @@ namespace cv05
             }
         }
 
-        public Lorry(double sizeOfTank, double stateOfTank, TypeOfFuel fuel , double maxLoad, double transportedLoad = 0) 
-            : base(sizeOfTank,stateOfTank,fuel)
+        public Lorry(double sizeOfTank, TypeOfFuel fuel , double maxLoad, double stateOfTank = 0, double transportedLoad = 0) 
+            : base(sizeOfTank,fuel, stateOfTank)
         {
             MaxLoad = maxLoad;
             TransportedLoad = transportedLoad;

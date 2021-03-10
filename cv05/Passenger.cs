@@ -20,8 +20,8 @@ namespace cv05
             }
         }
 
-        public PassengerCar(double sizeOfTank, double stateOfTank, TypeOfFuel fuel, int maxPersons, int transportedPersons = 0)
-            : base(sizeOfTank, stateOfTank, fuel)
+        public PassengerCar(double sizeOfTank, TypeOfFuel fuel, int maxPersons, double stateOfTank = 0, int transportedPersons = 0)
+            : base(sizeOfTank, fuel, stateOfTank)
         {
             MaxPersons = maxPersons;
             TransportedPersons = transportedPersons;

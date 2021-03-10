@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace cv05
 {
-    class Car
+    public class Car
     {
 
+        private Radio radio = new Radio();
 
         public double SizeOfTank { get; protected set; }
 
@@ -22,7 +23,7 @@ namespace cv05
             petrol, diesel
         }
 
-        public Car(double sizeOfTank, double stateOfTank, TypeOfFuel fuel)
+        public Car(double sizeOfTank, TypeOfFuel fuel, double stateOfTank = 0)
         {
             SizeOfTank = sizeOfTank;
             StateOfTank = stateOfTank;
@@ -43,6 +44,23 @@ namespace cv05
             {
                 StateOfTank = StateOfTank + amount;
             }
+        }
+
+        //radio section
+
+        public double GetRadioFrequency()
+        {
+            return radio.Frequency;
+        }
+
+        public bool RadioIsTurnOn()
+        {
+            return radio.TurnOn;
+        }
+
+        public void SetElementOfPreset(int index, double frequency)
+        {
+            radio.AddToPreset(index, frequency);
         }
     }
 };
