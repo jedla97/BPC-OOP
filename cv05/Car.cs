@@ -17,7 +17,8 @@ namespace cv05
         public TypeOfFuel Fuel { get; set; }
 
 
-        public enum TypeOfFuel {
+        public enum TypeOfFuel
+        {
             petrol, diesel
         }
 
@@ -42,5 +43,6 @@ namespace cv05
             {
                 StateOfTank = StateOfTank + amount;
             }
+        }
     }
-}
+};
