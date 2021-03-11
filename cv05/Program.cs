@@ -10,6 +10,14 @@ namespace cv05
     {
         static void Main(string[] args)
         {
+            try
+            {
+                PassengerCar pc = new PassengerCar(35, Car.TypeOfFuel.petrol, 5, 18, 7);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
             PassengerCar p = new PassengerCar(35, Car.TypeOfFuel.petrol, 5, 18);
             Lorry l = new Lorry(100, Car.TypeOfFuel.diesel, 50);
             Console.WriteLine(p);
