@@ -30,7 +30,7 @@ namespace cv05
             Fuel = fuel;
         }
 
-        public void refuel(TypeOfFuel fuel, double amount)
+        public void Refuel(TypeOfFuel fuel, double amount)
         {
             if (fuel != Fuel)
             {
