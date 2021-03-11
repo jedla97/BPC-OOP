@@ -38,5 +38,9 @@ namespace cv05
             }
         }
 
+        public override string ToString()
+        {
+            return String.Format("{0}Actual transported load is {1}.", base.ToString(), TransportedLoad);
+        }
     }
 }

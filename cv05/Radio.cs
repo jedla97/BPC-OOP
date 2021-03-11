@@ -46,7 +46,7 @@ namespace cv05
             }
             else
             {
-                return String.Format("Actual frequency is {0, 0:N2}", Frequency);
+                return String.Format("Radio frequency is {0, 0:N2}", Frequency);
             }
         }
     }

@@ -79,10 +79,10 @@ namespace cv05
         }
 
         // end of radio section
-        
+
         public override string ToString()
         {
-            return radio.ToString();
+            return String.Format("Staus of tank is {0} out of {1} {2}. {3}. ", StateOfTank, SizeOfTank, Fuel, radio.ToString());
         }
     }
 };

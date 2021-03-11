@@ -11,10 +11,10 @@ namespace cv05
         static void Main(string[] args)
         {
             Car c = new Car(28, Car.TypeOfFuel.petrol);
-            // PassengerCar p = new PassengerCar(5, 18, Car.TypeOfFuel.diesel, 5, 4);
+            PassengerCar p = new PassengerCar(5, Car.TypeOfFuel.diesel, 5, 18, 4);
             // Console.WriteLine(p.TransportedPersons);
             // p.TransportedPersons = 2;
-            // Console.WriteLine(p.TransportedPersons);
+            Console.WriteLine(p);
             Console.WriteLine(c.Fuel + "   " + c.StateOfTank);
             c.TurnRadio(true);
             Console.WriteLine(c);

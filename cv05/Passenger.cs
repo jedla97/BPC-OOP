@@ -38,5 +38,10 @@ namespace cv05
                 throw new ArgumentOutOfRangeException("Persons out of limit");
             }
         }
+
+        public override string ToString()
+        {
+            return String.Format("{0}We playing for {1} people.",base.ToString(), TransportedPersons);
+        }
     }
 }
