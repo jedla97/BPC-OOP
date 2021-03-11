@@ -58,9 +58,31 @@ namespace cv05
             return radio.TurnOn;
         }
 
+        public void TurnRadio(bool onOff)
+        {
+            radio.TurnOn = onOff;
+        }
+
         public void SetElementOfPreset(int index, double frequency)
         {
             radio.AddToPreset(index, frequency);
+        }
+
+        public void RetuneByIndex(int index)
+        {
+            radio.TuneRadioFromPreset(index);
+        }
+
+        public void RetuneByHand(double frequency)
+        {
+            radio.Frequency = frequency;
+        }
+
+        // end of radio section
+        
+        public override string ToString()
+        {
+            return radio.ToString();
         }
     }
 };

@@ -37,5 +37,17 @@ namespace cv05
                 throw new Exception("Not in preset");
             }
         }
+
+        public override string ToString()
+        {
+            if (TurnOn == false)
+            {
+                return "Radio is off";
+            }
+            else
+            {
+                return String.Format("Actual frequency is {0, 0:N2}", Frequency);
+            }
+        }
     }
 }
