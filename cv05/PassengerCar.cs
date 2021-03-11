@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cv05
 {
-    class PassengerCar : Car
+    public class PassengerCar : Car
     {
         private int transportedPersons;
         public int MaxPersons { get; private set; }
