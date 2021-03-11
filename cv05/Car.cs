@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cv05
 {
-    public class Car
+    abstract public class Car
     {
 
         private Radio radio = new Radio();
