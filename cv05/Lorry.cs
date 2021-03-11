@@ -8,7 +8,7 @@ namespace cv05
 {
     public class Lorry : Car
     {
-        public double transportedLoad;
+        private double transportedLoad;
 
         public double MaxLoad { get; private set; }
 

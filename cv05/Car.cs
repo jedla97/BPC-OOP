@@ -82,7 +82,7 @@ namespace cv05
 
         public override string ToString()
         {
-            return String.Format("Staus of tank is {0} out of {1} {2}. {3}. ", StateOfTank, SizeOfTank, Fuel, radio.ToString());
+            return String.Format("Status of tank is {0} out of {1}. Type of fuel {2}. {3}. ", StateOfTank, SizeOfTank, Fuel, radio.ToString());
         }
     }
 };

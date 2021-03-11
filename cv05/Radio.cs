@@ -22,7 +22,15 @@ namespace cv05
 
         public void AddToPreset(int index, double frequency)
         {
-            this.preset.Add(index, frequency);
+            if (!preset.ContainsKey(index))
+            {
+                this.preset.Add(index, frequency);
+            }
+            else
+            {
+                this.preset.Remove(index);
+                this.preset.Add(index, frequency);
+            }
         }
 
         public void TuneRadioFromPreset(int index)
